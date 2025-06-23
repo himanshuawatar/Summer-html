@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Calculator Project</title>
+</head>
+<style>
+    .container{
+        background-color: gray;
+        width: 400px;
+        height: 380px;
+        margin: auto;
+        margin-top: 5vh;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgb(71, 71, 71);
+    }
+
+    .display{
+        margin-top: 10px;
+        margin-left: 10px;
+        width: 90%;
+        text-align: right;
+        font-weight:100;
+        font-size: larger;
+        padding: 10px;
+    }
+
+    .buttons{
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: repeat(4,65px);
+        gap: 10px;
+        margin-left: 20px;
+
+       
+    }
+    .buttons button{
+        height: 50px;
+        background-color: rgb(212, 212, 212);
+    }
+
+</style>
+
+<body>
+    
+        <div class="container">
+                            <input class="display" type="number" value="0" readonly >
+            <div class="buttons">
+
+
+                <button>C</button>
+                <button>%</button>
+                <button><-</button>
+                <button>/</button>
+                <button>7</button>
+                <button>8</button>
+                <button>9</button>
+                <button>*</button>
+                <button>4</button>
+                <button>5</button>
+                <button>6</button>
+                <button>-</button>
+                <button>1</button>
+                <button>2</button>
+                <button>3</button>
+                <button>+</button>
+                <button>00</button>
+                <button>0</button>
+                <button>.</button>
+                <button>=</button>
+            </div>
+
+
+
+        </div>
+
+
+    
+
+</body>
+</html>
