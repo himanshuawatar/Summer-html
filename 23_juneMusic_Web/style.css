@@ -86,7 +86,61 @@ button{
 
 .right-content{
     display: flex;
+    flex-direction: column;
     background-color: #191414;
-    width: 65%;
+    width: 70%;
     height: 400px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.Trending-song{
+    margin-top: 10px;
+    margin-left: 20px;
+    padding-bottom: 50px;
+}
+
+.music{
+    height: 400px;
+    display: flex;
+    justify-content: space-evenly;
+    
+
+}
+
+.music-1, .music-2, .music-3, .music-4, .music-5{
+    background-color:#282525;
+    width: 150px;
+    height: 210px;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    
+}
+
+
+
+.play{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+
+input[type="range"] {
+  width: 100px;
+  margin-bottom: 30px;
+}
+
+.play-button {
+  background-color: white;
+  color: black;
+  transition: all 0.3s ease;
+}
+
+.playing {
+  background-color: #1DB954;
+  color: white;
 }

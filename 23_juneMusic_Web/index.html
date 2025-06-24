@@ -41,14 +41,113 @@
 
         <div class="right-content">
 
-            <h2><a href="#">Trending songs</a></h2>
+            <div class="Trending-song">
+                <h2><a href="#">Trending songs</a></h2>
+            </div>
 
+            <div class="music">
+                <div class="music-1">
+                    <div class="play">
+                        <audio id="audio1" src="Assests/I Guess.mp3"></audio>
+
+                        <button data-audio-id="audio1" class="play-button" onclick="togglePlay('audio1')">Play/Pause</button>
+                        <input type="range" id="slider-audio1" value="0" min="0" step="1" onchange="seekAudio('audio1', this)">
+                    </div>
+                </div>
+
+                <div class="music-2">
+                    <div class="play">
+                        <audio id="audio2" src="Assests/Aam Jahe Munde.mp3"></audio>
+                        <button class="play-button"  data-audio-id="audio2" onclick="togglePlay('audio2')">Play/Pause</button>
+                        <input type="range" id="slider-audio2" value="0" min="0" step="1" onchange="seekAudio('audio2', this)">
+                    </div>
+                </div>
+
+                <div class="music-3">
+                    
+                    <div class="play">
+                        <audio id="audio3" src="Assests/Russian Bandana.mp3"></audio>
+                        <button class="play-button"  data-audio-id="audio3" onclick="togglePlay('audio3')">Play/Pause</button>
+                        <input type="range" id="slider-audio3" value="0" min="0" step="1" onchange="seekAudio('audio3', this)">
+                    </div>
+
+                </div>
+
+                <div class="music-4">
+                    <div class="play">
+                        <audio id="audio4"  src="Assests/PAYAL SONG.mp3"></audio>
+                        <button class="play-button"   data-audio-id="audio4" onclick="togglePlay('audio4')">Play/Pause</button>
+                        <input type="range" id="slider-audio4" value="0" min="0" step="1" onchange="seekAudio('audio4', this)">
+                    </div>
+                    
+                </div>
+
+                <div class="music-5">
+                    <div class="play">
+                        <audio id="audio5"  src="Assests/Sapphire.mp3"></audio>
+                        <button class="play-button"  data-audio-id="audio5" onclick="togglePlay('audio5')">Play/Pause</button>
+                        <input type="range" id="slider-audio5" value="0" min="0" step="1" onchange="seekAudio('audio5', this)">
+                    </div>
+                </div>
+
+
+            </div>
+            
 
         </div>
 
 
-
     </div>
+
+
+<script>
+  function togglePlay(audioId) {
+    const audios = document.querySelectorAll("audio");
+    const buttons = document.querySelectorAll(".play-button");
+
+    // Pause all audios and reset buttons
+    audios.forEach(audio => {
+      if (audio.id !== audioId) {
+        audio.pause();
+        audio.currentTime = 0;
+      }
+    });
+
+    buttons.forEach(btn => {
+      if (btn.getAttribute("data-audio-id") !== audioId) {
+        btn.classList.remove("playing");
+      }
+    });
+
+    const audio = document.getElementById(audioId);
+    const button = document.querySelector(`.play-button[data-audio-id="${audioId}"]`);
+    const slider = document.getElementById("slider-" + audioId);
+
+    if (audio.paused) {
+      audio.play();
+      button.classList.add("playing");
+    } else {
+      audio.pause();
+      button.classList.remove("playing");
+    }
+
+    // Update slider while audio plays
+    audio.ontimeupdate = () => {
+      slider.value = audio.currentTime;
+    };
+
+    // Set slider max when audio is loaded
+    audio.onloadedmetadata = () => {
+      slider.max = audio.duration;
+    };
+  }
+
+  function seekAudio(audioId, slider) {
+    const audio = document.getElementById(audioId);
+    audio.currentTime = slider.value;
+  }
+</script>
+
 
 
 </body>
