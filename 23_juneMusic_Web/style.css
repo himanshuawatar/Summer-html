@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color:#1DB954;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #191414;
+    width: 100%;
+    height: 60px;
+    padding: 0 20px;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#image-logo{
+    width: 40px;
+}
+
+h2{
+    color: white;
+}
+
+ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+li {
+    display: inline;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+.main{
+    display: flex;
+}
+
+.left-content{
+    color: white;
+    background-color: #191414;
+    display: flex;
+    justify-content: flex-start;
+    margin: 10px;
+    flex-direction: column;
+    border-radius: 10px;
+    width: 30%;
+    height:400px;
+}
+
+.your-library{
+    margin-top: 10px;
+    margin-left: 20px;
+    padding-bottom: 50px;
+}
+
+.create-playlist{
+    margin: 10px;
+    background-color: #282525;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+button{
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.right-content{
+    display: flex;
+    background-color: #191414;
+    width: 65%;
+    height: 400px;
+}
