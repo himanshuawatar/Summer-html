@@ -1,4 +1,4 @@
-let num=4
+let num= prompt('Enter a Number')
 let factorial=1
 for(let i=1; i<=num; i++)
 {

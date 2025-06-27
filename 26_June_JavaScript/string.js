@@ -26,6 +26,9 @@ let wordcount=word.length
 
 // factorial, celcius, revarsal String, sum of digit of a number, check prime number,  
 
+let a
+console.log(typeof(a))
+
 
 
 
