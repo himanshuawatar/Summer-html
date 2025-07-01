@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(1, 1, 78);
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
+
+h2{
+    margin-bottom: 30px;
+}
+
+.container{
+    background-color: rgb(177, 175, 175);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 20px lightgray;
+    width: 350px;
+}
+
+input{
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.tr, td{
+    margin-left: 200px;
+}
+
+button{
+    padding: 10px;
+    margin-left: 100px;
+    width: 100px;
+    border-radius: 10px;
+    background-color: rgb(194, 174, 174);
+}
